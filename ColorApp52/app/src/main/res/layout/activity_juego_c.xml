@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Juego">
+    tools:context=".JuegoC">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -139,7 +139,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:backgroundTint="@color/transparente"
+        android:backgroundTint="#3d696969"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPalabra"
         app:srcCompat="@mipmap/ic_launcher" />
@@ -150,7 +150,7 @@
         android:layout_height="70dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="32dp"
-        android:backgroundTint="@color/transparente"
+        android:backgroundTint="#3d696969"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPalabra"
         app:srcCompat="@mipmap/ic_launcher" />
@@ -161,7 +161,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:backgroundTint="@color/transparente"
+        android:backgroundTint="#3d696969"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnColor1"
         app:srcCompat="@mipmap/ic_launcher" />
@@ -172,7 +172,7 @@
         android:layout_height="70dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="24dp"
-        android:backgroundTint="@color/transparente"
+        android:backgroundTint="#3d696969"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnColor2"
         app:srcCompat="@mipmap/ic_launcher" />
@@ -181,12 +181,12 @@
         android:id="@+id/btnPause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-
-
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#3d696969"
         android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pbTiempo"
         app:srcCompat="@android:drawable/ic_media_pause" />
+
 
 </android.support.constraint.ConstraintLayout>
