@@ -7,4 +7,8 @@
     <string name="palabrascorrectas">Palabras correctas</string>
     <string name="intentosfaltantes">Intentos faltantes</string>
     <string name="pause">Pause</string>
+    
+    
+    <string name="facebook_app_id">2153230684999756</string>
+    <string name="facebookk_login_protocol_sheme">fb2153230684999756</string>
 </resources>

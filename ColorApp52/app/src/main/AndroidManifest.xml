@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.davidpopayan.sena.colorapp5">
 
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="2153230684999756"></meta-data>
+
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,6 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:authorities="com.facebook.app.FacebookContentPrivider2153230684999756"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true"></provider>
+
+
+
         <activity android:name=".MenuT" />
         <activity android:name=".Juego" />
         <activity android:name=".Puntuacion" />
