@@ -167,7 +167,7 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
 
     //Método para finalizar el juego
     private void endGame() {
-        if (ab==0 && (faltantes==0 || segundos[1]>=30)){
+        if (ab==0 && (faltantes==0 || segundos[1]<=0)){
             Intent intent = new Intent(Juego.this,Resumen.class);
             startActivity(intent);
             finish();
@@ -243,7 +243,7 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
                 correctas++;
             }else {
                 faltantes--;
-                incorrectas--;
+                incorrectas++;
             }
         }
 
@@ -253,7 +253,7 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
                 correctas++;
             }else {
                 faltantes--;
-                incorrectas--;
+                incorrectas++;
             }
         }
 
@@ -263,7 +263,7 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
                 correctas++;
             }else {
                 faltantes--;
-                incorrectas--;
+                incorrectas++;
             }
         }
 
@@ -273,7 +273,7 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
                 correctas++;
             }else {
                 faltantes--;
-                incorrectas--;
+                incorrectas++;
             }
         }
 
