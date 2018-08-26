@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     tools:context=".JuegoC">
 
     <LinearLayout
@@ -30,7 +31,8 @@
                 android:layout_weight="2"
                 android:text="@string/palabrasdesplegadas"
                 android:textAlignment="center"
-                android:textAllCaps="true" />
+                android:textAllCaps="true"
+                android:textColor="@color/cardview_light_background" />
 
             <TextView
                 android:id="@+id/txtNPalabras"
@@ -39,6 +41,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="0"
+                android:textColor="@color/cardview_light_background"
                 android:textSize="42sp" />
 
         </LinearLayout>
@@ -56,7 +59,8 @@
                 android:layout_weight="2"
                 android:text="@string/palabrascorrectas"
                 android:textAlignment="center"
-                android:textAllCaps="true" />
+                android:textAllCaps="true"
+                android:textColor="@color/cardview_light_background" />
 
             <TextView
                 android:id="@+id/txtCorrectas"
@@ -65,6 +69,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="0"
+                android:textColor="@color/cardview_light_background"
                 android:textSize="42sp" />
 
         </LinearLayout>
@@ -82,7 +87,8 @@
                 android:layout_weight="2"
                 android:text="@string/intentosfaltantes"
                 android:textAlignment="center"
-                android:textAllCaps="true" />
+                android:textAllCaps="true"
+                android:textColor="@color/cardview_light_background" />
 
             <TextView
                 android:id="@+id/txtFaltantes"
@@ -91,6 +97,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="0"
+                android:textColor="@color/cardview_light_background"
                 android:textSize="42sp" />
 
         </LinearLayout>
@@ -130,6 +137,7 @@
         android:layout_marginTop="8dp"
         android:text="Tiempo"
         android:textAllCaps="true"
+        android:textColor="@color/cardview_light_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pbTiempo" />
 
@@ -139,10 +147,11 @@
         android:layout_height="70dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:backgroundTint="#3d696969"
+        android:backgroundTint="@color/transparente"
+        android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPalabra"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:srcCompat="@drawable/ju" />
 
     <ImageButton
         android:id="@+id/btnColor2"
@@ -150,10 +159,11 @@
         android:layout_height="70dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="32dp"
-        android:backgroundTint="#3d696969"
+        android:backgroundTint="@color/transparente"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPalabra"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:srcCompat="@drawable/ego" />
 
     <ImageButton
         android:id="@+id/btnColor3"
@@ -161,10 +171,11 @@
         android:layout_height="70dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:backgroundTint="#3d696969"
+        android:backgroundTint="@color/transparente"
+        android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnColor1"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:srcCompat="@drawable/ju" />
 
     <ImageButton
         android:id="@+id/btnColor4"
@@ -172,21 +183,23 @@
         android:layout_height="70dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="24dp"
-        android:backgroundTint="#3d696969"
+        android:backgroundTint="@color/transparente"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnColor2"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:srcCompat="@drawable/ego" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/btnPause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#3d696969"
+        android:layout_marginEnd="15dp"
+
+
         android:clickable="true"
+        app:backgroundTint="@color/azuls"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pbTiempo"
-        app:srcCompat="@android:drawable/ic_media_pause" />
-
+        app:srcCompat="@drawable/stop" />
 
 </android.support.constraint.ConstraintLayout>
