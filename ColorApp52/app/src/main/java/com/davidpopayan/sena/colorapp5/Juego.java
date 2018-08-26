@@ -1,6 +1,7 @@
 package com.davidpopayan.sena.colorapp5;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.design.widget.FloatingActionButton;
@@ -100,6 +101,7 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
         faltantes=3;
         nPausas=0;
         pbTiempoo.setMax(30);
+        pbTiempoo.setProgress(0);
 
     }
 
@@ -166,6 +168,9 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
     //Método para finalizar el juego
     private void endGame() {
         if (ab==0 && (faltantes==0 || segundos[1]>=30)){
+            Intent intent = new Intent(Juego.this,Resumen.class);
+            startActivity(intent);
+            finish();
             ab=1;
             bandera1=false;
             bandera=false;

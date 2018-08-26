@@ -1,6 +1,7 @@
 package com.davidpopayan.sena.colorapp5;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -108,6 +109,7 @@ public class JuegoC extends AppCompatActivity implements View.OnClickListener{
         if (modo==1) {
             pbTiempoo.setMax(30);
             tiempo = juegoC.getInt("tiempo",3);
+            pbTiempoo.setProgress(30);
             faltantes=3;
         }else {
             pbTiempoo.setMax(0);
@@ -190,9 +192,13 @@ public class JuegoC extends AppCompatActivity implements View.OnClickListener{
     //Método para finalizar el juego
     private void endGame() {
         if (ab==0 && ( ((faltantes==0 || segundos[1]>=30) && modo==1 ) ) || (faltantes==0 && modo==2) ){
+            Intent intent = new Intent(JuegoC.this,Resumen.class);
+            startActivity(intent);
+            finish();
             ab=1;
             bandera1=false;
             bandera=false;
+
         }
     }
 
