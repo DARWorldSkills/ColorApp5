@@ -33,7 +33,7 @@
                 android:textAllCaps="true" />
 
             <TextView
-                android:id="@+id/txtCorrectas"
+                android:id="@+id/txtNPalabras"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -59,7 +59,7 @@
                 android:textAllCaps="true" />
 
             <TextView
-                android:id="@+id/txtIncorrectas"
+                android:id="@+id/txtCorrectas"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -102,7 +102,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:text="Palabra"
         android:textAllCaps="true"
         android:textSize="42sp"
@@ -134,43 +134,58 @@
         app:layout_constraintTop_toBottomOf="@+id/pbTiempo" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btnColor1"
         android:layout_width="150dp"
         android:layout_height="70dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
+        android:backgroundTint="#3d696969"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPalabra"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/btnColor2"
         android:layout_width="150dp"
         android:layout_height="70dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="32dp"
+        android:backgroundTint="#3d696969"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPalabra"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/btnColor3"
         android:layout_width="150dp"
         android:layout_height="70dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
+        android:backgroundTint="#3d696969"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/btnColor1"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/btnColor4"
         android:layout_width="150dp"
         android:layout_height="70dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="24dp"
+        android:backgroundTint="#3d696969"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/btnColor2"
         app:srcCompat="@mipmap/ic_launcher" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#3d696969"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pbTiempo"
+        app:srcCompat="@android:drawable/ic_media_pause" />
 
 </android.support.constraint.ConstraintLayout>

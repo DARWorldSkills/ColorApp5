@@ -6,4 +6,5 @@
     <string name="palabrasdesplegadas">Palabras desplegadas</string>
     <string name="palabrascorrectas">Palabras correctas</string>
     <string name="intentosfaltantes">Intentos faltantes</string>
+    <string name="pause">Pause</string>
 </resources>
