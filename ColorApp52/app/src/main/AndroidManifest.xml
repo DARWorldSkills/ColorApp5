@@ -34,6 +34,7 @@
         <activity android:name=".Juego" />
         <activity android:name=".Puntuacion" />
         <activity android:name=".Configuracion" />
+        <activity android:name=".JuegoC"></activity>
         <activity android:name=".Resumen"></activity>
     </application>
 

@@ -2,6 +2,7 @@ package com.davidpopayan.sena.colorapp5;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.design.widget.FloatingActionButton;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Juego extends AppCompatActivity implements View.OnClickListener {
+public class JuegoC extends AppCompatActivity implements View.OnClickListener{
     //Declaración de variables
     List<String> listPalabras = new ArrayList<>();
     List<Integer> listaColores = new ArrayList<>();
@@ -33,13 +34,15 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
     int ab=0;
     int [] segundos ={0,30};
     int icR, ipR;
-    int valorcito, nPausas;
+    int valorcito, nPausas, tiempo, modo;
+    SharedPreferences juegoC;
+    //Método para la creación de la actividad Juego Configurado
 
-    //Método para la creación de la actividad Juego
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_juego);
+        setContentView(R.layout.activity_juego_c);
         inizialite();
         inputLists();
         inputOnClickListener();
@@ -93,15 +96,26 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
 
     //Método para ingresar valores al juego
     private void inputValues() {
+        juegoC = getSharedPreferences("juegoC",MODE_PRIVATE);
+        modo= juegoC.getInt("modo",1);
+
         correctas = 0;
         incorrectas=0;
         bandera=true;
         bandera1=true;
         ab=0;
-        faltantes=3;
+
         nPausas=0;
-        pbTiempoo.setMax(30);
-        pbTiempoo.setProgress(0);
+        if (modo==1) {
+            pbTiempoo.setMax(30);
+            tiempo = juegoC.getInt("tiempo",3);
+            pbTiempoo.setProgress(30);
+            faltantes=3;
+        }else {
+            pbTiempoo.setMax(0);
+            faltantes = juegoC.getInt("faltantes",3);
+            tiempo=3;
+        }
 
     }
 
@@ -145,16 +159,26 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
                         public void run() {
                             if (bandera1) {
                                 segundos[0]++;
-                                segundos[1]--;
+                                if (modo==1) {
+                                    segundos[1]--;
+                                }else {
+                                    segundos[1]++;
+                                }
                                 txtTiempo.setText("Tiempo: " + segundos[1]);
                                 pbTiempoo.setProgress(segundos[1]);
-                                if (segundos[0] >= 3) {
+
+                                if (modo==2 && segundos[1]>=30){
+                                    segundos[1]=0;
+                                }
+                                if (segundos[0] >= tiempo) {
                                     segundos[0] = 0;
                                     randomizar();
                                     inputData();
                                     incorrectas++;
                                     faltantes--;
                                 }
+
+
                                 endGame();
                             }
                         }
@@ -167,13 +191,14 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
 
     //Método para finalizar el juego
     private void endGame() {
-        if (ab==0 && (faltantes==0 || segundos[1]>=30)){
-            Intent intent = new Intent(Juego.this,Resumen.class);
+        if (ab==0 && ( ((faltantes==0 || segundos[1]>=30) && modo==1 ) ) || (faltantes==0 && modo==2) ){
+            Intent intent = new Intent(JuegoC.this,Resumen.class);
             startActivity(intent);
             finish();
             ab=1;
             bandera1=false;
             bandera=false;
+
         }
     }
 
