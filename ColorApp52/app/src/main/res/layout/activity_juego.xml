@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/fondo"
     android:layout_height="match_parent"
     tools:context=".Juego">
 
@@ -30,7 +31,8 @@
                 android:layout_weight="2"
                 android:text="@string/palabrasdesplegadas"
                 android:textAlignment="center"
-                android:textAllCaps="true" />
+                android:textAllCaps="true"
+                android:textColor="@color/cardview_light_background" />
 
             <TextView
                 android:id="@+id/txtNPalabras"
@@ -56,7 +58,8 @@
                 android:layout_weight="2"
                 android:text="@string/palabrascorrectas"
                 android:textAlignment="center"
-                android:textAllCaps="true" />
+                android:textAllCaps="true"
+                android:textColor="@color/cardview_light_background" />
 
             <TextView
                 android:id="@+id/txtCorrectas"
@@ -82,7 +85,8 @@
                 android:layout_weight="2"
                 android:text="@string/intentosfaltantes"
                 android:textAlignment="center"
-                android:textAllCaps="true" />
+                android:textAllCaps="true"
+                android:textColor="@color/cardview_light_background" />
 
             <TextView
                 android:id="@+id/txtFaltantes"
@@ -130,6 +134,7 @@
         android:layout_marginTop="8dp"
         android:text="Tiempo"
         android:textAllCaps="true"
+        android:textColor="@color/cardview_light_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pbTiempo" />
 
@@ -187,6 +192,6 @@
         android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pbTiempo"
-        app:srcCompat="@android:drawable/ic_media_pause" />
+        app:srcCompat="@drawable/stop" />
 
 </android.support.constraint.ConstraintLayout>

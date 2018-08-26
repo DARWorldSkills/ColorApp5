@@ -46,9 +46,13 @@ public class MenuT extends AppCompatActivity implements View.OnClickListener{
                 break;
             case R.id.btnPuntuacion:
                 guardar = 0;
+                Intent intent1 = new Intent(MenuT.this,Puntuacion.class);
+                startActivity(intent1);
                 break;
             case R.id.btnConfiguracion:
                 guardar = 0;
+                Intent intent2 = new Intent(MenuT.this,Configuracion.class);
+                startActivity(intent2);
                 break;
 
         }
