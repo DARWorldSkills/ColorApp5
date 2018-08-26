@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ColorApp5</string>
+    <string name="jugar">Jugar</string>
+    <string name="punutacion">Puntuación</string>
+    <string name="configuracion">Configuración</string>
+    <string name="palabrasdesplegadas">Palabras desplegadas</string>
+    <string name="palabrascorrectas">Palabras correctas</string>
+    <string name="intentosfaltantes">Intentos faltantes</string>
 </resources>
